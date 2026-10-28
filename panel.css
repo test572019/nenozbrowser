@@ -1,0 +1,26 @@
+body.panel { display:flex; flex-direction:column; height:100%; background:var(--tab); border-left:1px solid var(--line); }
+.panel header { display:flex; align-items:center; gap:6px; height:44px; padding:0 12px; border-bottom:1px solid var(--line); flex:none; }
+.panel header strong { font-size:15px; font-weight:600; }
+.panel .sp { flex:1; }
+.panel button { height:30px; padding:0 12px; border:1px solid var(--line); border-radius:15px; background:var(--tab); cursor:pointer; }
+.panel button:hover:not(:disabled) { background:var(--hover); }
+.panel button.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:500; }
+:root[data-theme="dark"] .panel button.primary { color:#202124; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .panel button.primary { color:#202124; } }
+.panel button.primary:hover:not(:disabled) { filter:brightness(1.08); background:var(--accent); }
+section { display:flex; flex-direction:column; gap:10px; padding:12px; flex:1; min-height:0; }
+section[hidden] { display:none; }
+#setup h2 { margin:8px 0 0; font-size:16px; font-weight:600; }
+#setup p { margin:0; color:var(--muted); }
+#key, #input { width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--field); resize:none; }
+#ctx { padding:8px 10px; border-radius:8px; background:var(--field); }
+#ctx b, #ctx span { display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+#ctx span { color:var(--muted); font-size:12px; }
+#msgs { flex:1; min-height:0; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
+.msg { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.5; }
+.msg.user { align-self:flex-end; max-width:88%; padding:8px 12px; border-radius:14px 14px 4px 14px; background:var(--field); }
+#empty { margin:0; color:var(--muted); }
+#empty[hidden], #err[hidden], .err[hidden] { display:none; }
+.err { margin:0; padding:8px 10px; border-radius:6px; background:rgba(217,48,37,.12); }
+#composer { display:flex; flex-direction:column; gap:8px; flex:none; }
+#composer label { color:var(--muted); display:flex; gap:6px; align-items:center; }

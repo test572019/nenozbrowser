@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'">
+<title>Nenoz Browser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="tabstrip">
+    <div id="logo" role="img" aria-label="Nenoz Browser">
+      <svg viewBox="0 0 100 28" width="100" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="bg" width="28" height="28" rx="8"/>
+        <rect class="bar" x="8" y="7" width="3" height="14" rx="1"/>
+        <rect class="bar" x="17" y="7" width="3" height="14" rx="1"/>
+        <polygon class="diag" points="8.2,7 11.4,7 19.8,21 16.6,21"/>
+        <text class="wm" x="36" y="19.5">NENOZ</text>
+      </svg>
+    </div>
+    <div id="tabs"></div><button id="newtab" title="New tab" aria-label="New tab">+</button></div>
+  <div id="toolbar">
+    <button id="back" title="Back" aria-label="Back">&#8592;</button>
+    <button id="forward" title="Forward" aria-label="Forward">&#8594;</button>
+    <button id="reload" title="Reload" aria-label="Reload">&#8635;</button>
+    <input id="omnibox" type="text" spellcheck="false" placeholder="Search Google or type a URL" aria-label="Address bar">
+    <select id="profile" title="Chrome profile" aria-label="Chrome profile"></select>
+    <button id="p-claude" title="Claude side panel (Ctrl+J)">&#10022; Claude</button>
+    <button id="p-bookmarks" title="Bookmarks" aria-label="Bookmarks">&#9733;</button>
+    <button id="p-history" title="History" aria-label="History">&#128339;</button>
+    <button id="p-settings" title="Settings" aria-label="Settings">&#9881;</button>
+  </div>
+  <div id="bookmarkbar"></div>
+  <main id="page" hidden></main>
+  <script src="app.js"></script>
+</body>
+</html>
