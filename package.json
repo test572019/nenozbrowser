@@ -1,0 +1,13 @@
+{
+  "name": "nenoz-browser",
+  "version": "0.1.0",
+  "description": "Nenoz Browser - lightweight Chromium-based browser",
+  "main": "main.js",
+  "scripts": { "start": "electron ." },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.1.0",
+    "cross-fetch": "^4.0.0",
+    "sql.js": "^1.10.3"
+  },
+  "devDependencies": { "electron": "^33.0.0" }
+}
